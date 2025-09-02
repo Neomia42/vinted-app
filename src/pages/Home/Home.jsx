@@ -7,23 +7,62 @@ import heroImg from "../../assets/img/hero-24963eb2.jpg";
 import { API_URL } from "../../config/api";
 import "./Home.css";
 
-const Home = () => {
+const Home = ({
+  searchFilters,
+  currentPage,
+  onPageChange,
+  onTotalPagesChange,
+}) => {
   const [data, setdata] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${API_URL}/offers`);
-        setdata(response.data.offers);
+        setIsLoading(true);
+
+        // Construction des paramètres de requête
+        const params = new URLSearchParams();
+        if (searchFilters?.title) params.append("title", searchFilters.title);
+        if (searchFilters?.priceMin)
+          params.append("priceMin", searchFilters.priceMin);
+        if (searchFilters?.priceMax)
+          params.append("priceMax", searchFilters.priceMax);
+        if (searchFilters?.sort) params.append("sort", searchFilters.sort);
+        if (currentPage) params.append("page", currentPage);
+        params.append("limit", "20"); // 20 articles par page c'est dejà bien ;)
+
+        const queryString = params.toString();
+        const url = `${API_URL}/offers${queryString ? `?${queryString}` : ""}`;
+
+        // console.log(" URL de la requête:", url);
+
+        const response = await axios.get(url);
+        setdata(response.data.offers || []);
+
+        // Calculer le nombre total de pages
+        const total =
+          response.data.nombreAnnonces ||
+          response.data.count ||
+          response.data.offers?.length ||
+          0;
+        const calculatedTotalPages = Math.ceil(total / 20);
+        setTotalPages(calculatedTotalPages);
+
+        // Informer le parent du nombre total de pages
+        if (onTotalPagesChange) {
+          onTotalPagesChange(calculatedTotalPages);
+        }
+
         setIsLoading(false);
-        // console.log(response.data.offers.);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setIsLoading(false);
       }
     };
     fetchData();
-  }, []);
+  }, [searchFilters, currentPage, onTotalPagesChange]);
 
   return isLoading ? (
     <div className="loader-container">
@@ -39,10 +78,9 @@ const Home = () => {
     </div>
   ) : (
     <main>
-      <div
-        className="Home-img-baner"
-        style={{ backgroundImage: `url(${heroImg})` }}
-      ></div>
+      <div className="Home-img-baner">
+        <img src={heroImg} alt="banière" />
+      </div>
 
       <div className="cards-container">
         {data.map((offers, index) => {

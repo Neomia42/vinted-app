@@ -15,12 +15,46 @@ import SuccessPublish from "./pages/Publish/SuccessPublish";
 
 function App() {
   const [isConnected, setIsConnected] = useState(Cookie.get("token") || false);
+  const [searchFilters, setSearchFilters] = useState({});
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+
+  const handleSearch = (filters) => {
+    setSearchFilters(filters);
+    setCurrentPage(1);
+  };
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const handleTotalPagesChange = (total) => {
+    setTotalPages(total);
+  };
+
   return (
     <Router>
       <div className="app-container">
-        <Header isConnected={isConnected} setIsConnected={setIsConnected} />
+        <Header
+          isConnected={isConnected}
+          setIsConnected={setIsConnected}
+          onSearch={handleSearch}
+          onPageChange={handlePageChange}
+          currentPage={currentPage}
+          totalPages={totalPages}
+        />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <Home
+                searchFilters={searchFilters}
+                currentPage={currentPage}
+                onPageChange={handlePageChange}
+                onTotalPagesChange={handleTotalPagesChange}
+              />
+            }
+          />
           <Route path="/offer/:id" element={<Product />} />
           <Route
             path="/signup"

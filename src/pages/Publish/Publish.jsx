@@ -139,7 +139,7 @@ const Publish = ({ isConnected, setIsConnected }) => {
       <div className="publish-items-container">
         {isConnected ? (
           <div className="main-publish">
-            <h1>Vend ton articles</h1>
+            <h1>Vend ton article</h1>
 
             <form
               className="publish-form"
@@ -148,7 +148,7 @@ const Publish = ({ isConnected, setIsConnected }) => {
 
                 // Validation côté client
                 if (!validateForm()) {
-                  console.log("❌ Validation échouée:", errors);
+                  console.log(" Validation échouée:", errors);
                   return;
                 }
 
@@ -490,7 +490,7 @@ const Publish = ({ isConnected, setIsConnected }) => {
             <div className="block-top">
               <h1>Vous devez posséder un compte </h1>
               <Link to="/signup">
-                <button>S'Incrire</button>s
+                <button>S'Incrire</button>
               </Link>
               <h1>Ou vous connecter pour vendre</h1>
               <Link to="/login">
