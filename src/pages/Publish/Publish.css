@@ -1,0 +1,388 @@
+.main-publish-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.publish-items-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px 30px 0 30px;
+}
+.card-publish-product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------IS NOT CONNECTED CSS -----------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------ */
+.block-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  width: 400px;
+  height: 600px;
+  margin: 0px auto 20px auto;
+  background-color: #fcfcfc;
+  border: 2px solid #e6e6e6;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 7px 22px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 7px 22px 0px rgba(0, 0, 0, 0.1);
+}
+.block-top img {
+  height: 45px;
+}
+.block-top h1 {
+  font-size: 22px;
+  font-weight: 600;
+  font-style: italic;
+}
+.block-top h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #404040;
+}
+.block-top button {
+  background-color: #ffffff;
+  color: #007782;
+  border: 1px solid #007782;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 150px;
+  box-sizing: border-box;
+  font-size: 15px;
+  justify-content: center;
+}
+.block-top button:hover {
+  background-color: #007782;
+  color: white;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------- IS CONNECTED CSS -----------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------ */
+.main-publish {
+  display: flex;
+  flex-direction: column;
+  /* height: 80vh; */
+  gap: 20px;
+}
+
+.cards-publish {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 5px;
+  height: auto;
+  padding: 30px 20px 30px 20px;
+  border: 1px solid #00778238;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.card-publish-picture {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+.card-publish-picture h2 {
+  color: #007782;
+}
+.multiple-dropzone {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.picture-preview img {
+  width: 180px;
+  height: 180px;
+}
+.multiple-dropzone h2 {
+  color: #007782;
+  margin-bottom: 20px;
+}
+.picture-preview-multiple img {
+  height: 100px;
+  width: 100px;
+}
+.label-picture {
+  width: 160px;
+  height: 160px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 36px;
+  font-weight: bold;
+  color: #00778289;
+}
+.label-picture-multiple {
+  width: 100px;
+  height: 100px;
+  /* border: 2px solid #00778289; */
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 26px;
+  font-weight: bold;
+  color: #00778289;
+}
+.dropzone-main {
+  width: 100%;
+  height: 180px;
+  border: 2px dashed #00778289;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  color: #00778289;
+  transition: all 0.3s ease;
+}
+.dropzone-main:hover {
+  border-color: #007782;
+  color: #007782;
+  background-color: #f0f8ff;
+}
+.dropzone-main.drag-active {
+  border-color: #007782;
+  color: #007782;
+  background-color: #e6f7ff;
+  transform: scale(1.02);
+}
+.dropzone-multiple {
+  width: 100%;
+  height: 100px;
+  border: 2px dashed #00778289;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  color: #00778289;
+  transition: all 0.3s ease;
+}
+.dropzone-multiple:hover {
+  border-color: #007782;
+  color: #007782;
+  background-color: #f0f8ff;
+}
+.dropzone-multiple.drag-active {
+  border-color: #007782;
+  color: #007782;
+  background-color: #e6f7ff;
+  transform: scale(1.02);
+}
+.label-input-gen {
+  font-size: 18px;
+  color: #007782;
+}
+.delete-btn-preview {
+  background-color: #ffffff;
+  color: #ff0000ad;
+  border: none;
+  padding: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 18px;
+  justify-content: center;
+}
+.picture-preview-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-publish-title {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  border-bottom: 1px solid rgb(202, 202, 202);
+  padding: 15px 0 25px 0;
+}
+.card-publish-title input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #00778289;
+  padding: 0 15px 0 15px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+.card-publish-title input:focus {
+  outline: none;
+}
+
+.card-publish-desc {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  border-bottom: 1px solid rgb(202, 202, 202);
+  padding: 15px 0 25px 0;
+}
+.card-publish-desc textarea {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-bottom: 1px solid #00778289;
+  padding: 10px 15px 0 15px;
+  box-sizing: border-box;
+  resize: none;
+  font-size: 15px;
+}
+.card-publish-desc textarea:focus {
+  outline: none;
+}
+.details-brand,
+.details-size,
+.details-color,
+.details-condition,
+.details-city {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  border-bottom: 1px solid rgb(202, 202, 202);
+  padding: 15px 0 25px 0;
+}
+.details-brand input,
+.details-size input,
+.details-color input,
+.details-condition input,
+.details-city input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #00778289;
+  padding: 0 15px 0 15px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+.details-brand input,
+.details-size input,
+.details-color input,
+.details-condition input,
+.details-city input:focus {
+  outline: none;
+}
+.details-price {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  border-bottom: 1px solid rgb(202, 202, 202);
+  padding: 15px 0 25px 0;
+}
+.details-price input {
+  width: 10%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #00778289;
+  padding: 0 15px 0 15px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+.details-price input:focus {
+  outline: none;
+}
+.details-price span {
+  font-size: 24px;
+}
+.container-btn-add {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-add {
+  background-color: #007782;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100px;
+  font-size: 18px;
+  margin: 0 0 24px 0;
+}
+.btn-add:hover {
+  background-color: #005f61;
+}
+.btn-add:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------- ERROR STYLES ------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------ */
+
+.input-error {
+  border: 2px solid #e74c3c !important;
+  background-color: #ffeaea;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.error-message-general {
+  background-color: #ffeaea;
+  color: #e74c3c;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.error-message-global {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

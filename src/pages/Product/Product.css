@@ -1,0 +1,134 @@
+.main-container {
+  background-color: #fcfcfc;
+  min-height: 100vh;
+}
+.product-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px 30px 0 30px;
+}
+.product-main a {
+  display: inline-flex;
+  line-height: 1.1;
+  justify-content: center;
+  gap: 4px;
+  margin-left: 75px;
+  padding: 30px 0 10px 0;
+  font-weight: bold;
+  text-decoration: none;
+  color: #007782;
+  flex: 1;
+}
+.product-main a:hover {
+  color: #007782b1;
+}
+.product-container {
+  gap: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* iPictures container  */
+.product-image {
+  display: flex;
+  width: 600px;
+  gap: 4px;
+}
+
+.img-product-main {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+.img-left {
+  flex: 1;
+  position: relative;
+  display: inline-block;
+}
+.zoom-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  color: rgb(172, 172, 172);
+}
+.zoom-icon:hover {
+  color: rgb(255, 255, 255);
+}
+
+.img-rig-container {
+  flex-direction: column;
+  display: flex;
+  gap: 4px;
+}
+.img-rigth {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+.img-product-additional {
+  max-height: calc(600px / 5 - 3.1px);
+  object-fit: cover;
+  width: 100%;
+}
+/* .img-rigth span {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: #00778264;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 16px;
+}
+.img-rigth span:hover {
+  background: #007782;
+  color: white;
+} */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 320px;
+  background-color: white;
+  padding: 26px;
+  -webkit-box-shadow: 1px 7px 22px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 7px 22px 0px rgba(0, 0, 0, 0.1);
+}
+.price-item {
+  position: relative;
+  font-size: 24px;
+  font-weight: 600;
+}
+.prod-details-block {
+  display: flex;
+  width: 100%;
+  padding: 8px 0;
+}
+.detail-key {
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  flex: 1;
+  color: #a4a4a4;
+}
+.detail-value {
+  display: flex;
+  font-weight: normal;
+  font-size: 14px;
+  flex: 1;
+  font-weight: 600;
+  color: #838383;
+}
+.product-info .divider-card {
+  border-top: 1px solid #00778264;
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 30px;
+}

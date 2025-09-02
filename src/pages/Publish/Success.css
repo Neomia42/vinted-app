@@ -1,0 +1,58 @@
+.success-publish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  gap: 30px;
+  margin-top: 150px;
+}
+.success-publish h1 {
+  color: #007782;
+  font-size: 36px;
+}
+
+.success-publish a {
+  text-decoration: none;
+  color: white;
+}
+.success-publish a button {
+  background-color: #ffffff;
+  color: #007782;
+  border: 1px solid #007782;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 200px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+.success-publish a button:hover {
+  background-color: #007782;
+  color: white;
+}
+.success-image {
+  width: 200px;
+  height: 200px;
+}
+.success-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.success-publish p {
+  font-size: 18px;
+  color: #333;
+  text-align: left;
+}
+.success-buttons {
+  display: flex;
+  gap: 20px;
+}
+.offer-details p {
+  margin: 10px 0 10px 0;
+}
+.success-publish p span {
+  font-weight: bold;
+}

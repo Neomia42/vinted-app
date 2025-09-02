@@ -1,0 +1,97 @@
+/* ---------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------- HEADER CSS -------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------ */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 1280px;
+}
+.header-logo {
+  height: 36px;
+  width: auto;
+}
+.btn-header {
+  display: flex;
+  gap: 10px;
+}
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+.isconnected-buttons {
+  display: flex;
+  gap: 10px;
+}
+.logout-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 150px;
+  box-sizing: border-box;
+}
+
+.btn-signup-login {
+  background-color: #ffffff;
+  color: #007782;
+  border: 1px solid #007782;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 150px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+.btn-signup-login:hover {
+  background-color: #007782;
+  color: white;
+}
+.sell-your-items {
+  background-color: #007782;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 150px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+.sell-your-items:hover {
+  background-color: #ffffff;
+  color: #007782;
+  border: 1px solid #007782;
+}
+.default-avatar-profil {
+  color: #888;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin-left: 25px;
+}
