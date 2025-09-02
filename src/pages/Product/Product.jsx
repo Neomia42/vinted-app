@@ -5,6 +5,7 @@ import { ColorRing } from "react-loader-spinner";
 import { TbZoomInArea } from "react-icons/tb";
 import { IoHome } from "react-icons/io5";
 import { API_URL } from "../../config/api";
+import Payment from "../../components/Payment/Payment";
 
 import "./Product.css";
 
@@ -12,6 +13,7 @@ const Product = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [showPayment, setShowPayment] = useState(false);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -26,6 +28,14 @@ const Product = () => {
     };
     fetchProduct();
   }, [id]);
+
+  const handleBuyClick = () => {
+    setShowPayment(true);
+  };
+
+  const handleClosePayment = () => {
+    setShowPayment(false);
+  };
 
   return isLoading ? (
     <div className="loader-container">
@@ -83,7 +93,21 @@ const Product = () => {
                 </div>
               ))}
               <div className="divider-card"></div>
+              <div className="product-description-section">
+                <div className="product-name">
+                  <h2>Nom du Produit:</h2>
+                  {product.product_name}
+                </div>
+                <div className="product-description">
+                  <h2>Description:</h2>
+                  {product.product_description}
+                </div>
+              </div>
             </div>
+            <div className="buy-btn">
+              <button onClick={handleBuyClick}>Acheter</button>
+            </div>
+
             {/* <div className="product-owner">
               <div className="owner-avatar">
                 <img
@@ -99,6 +123,11 @@ const Product = () => {
           </div>
         </div>
       </div>
+
+      {/* Affichage conditionnel du composant Payment */}
+      {showPayment && (
+        <Payment product={product} onClose={handleClosePayment} />
+      )}
     </main>
   );
 };
