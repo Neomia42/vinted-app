@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./App.css";
 
 // Import components
-import Header from "./components/Header/header";
+import Header from "./components/Header/Header";
 // Import pages
 import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";
