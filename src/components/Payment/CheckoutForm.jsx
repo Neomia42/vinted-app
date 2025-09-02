@@ -9,9 +9,7 @@ import { API_URL } from "../../config/api";
 import "./CheckoutForm.css";
 
 const CheckoutForm = ({ product }) => {
-  // Permet de faire une requête à Stripe pour confirmer le paiement
   const stripe = useStripe();
-  // Permet de récupérer le contenu des inputs
   const elements = useElements();
 
   // State qui gère les messages d'erreurs
@@ -23,7 +21,6 @@ const CheckoutForm = ({ product }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // On commence à charger
     setIsLoading(true);
 
     if (elements == null || !stripe) {
