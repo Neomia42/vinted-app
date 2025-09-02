@@ -31,7 +31,7 @@ const Home = ({
           params.append("priceMax", searchFilters.priceMax);
         if (searchFilters?.sort) params.append("sort", searchFilters.sort);
         if (currentPage) params.append("page", currentPage);
-        params.append("limit", "20"); // 20 articles par page c'est dejà bien ;)
+        params.append("limit", "10"); // 10 articles par page
 
         const queryString = params.toString();
         const url = `${API_URL}/offers${queryString ? `?${queryString}` : ""}`;
@@ -47,7 +47,7 @@ const Home = ({
           response.data.count ||
           response.data.offers?.length ||
           0;
-        const calculatedTotalPages = Math.ceil(total / 20);
+        const calculatedTotalPages = Math.ceil(total / 10);
         setTotalPages(calculatedTotalPages);
 
         // Informer le parent du nombre total de pages

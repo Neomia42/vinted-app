@@ -103,34 +103,34 @@ const Header = ({
                 <option value="price_asc">Prix croissant</option>
                 <option value="price_desc">Prix décroissant</option>
               </select>
+
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="pagination-container-inline">
+                  <button
+                    onClick={() => handlePageChange(currentPage - 1)}
+                    disabled={currentPage === 1}
+                    className="pagination-btn"
+                  >
+                    ←
+                  </button>
+
+                  <span className="pagination-info">
+                    {currentPage}/{totalPages}
+                  </span>
+
+                  <button
+                    onClick={() => handlePageChange(currentPage + 1)}
+                    disabled={currentPage === totalPages}
+                    className="pagination-btn"
+                  >
+                    →
+                  </button>
+                </div>
+              )}
             </div>
           </form>
         </div>
-
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <div className="pagination-container">
-            <button
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-              className="pagination-btn"
-            >
-              ←
-            </button>
-
-            <span className="pagination-info">
-              Page {currentPage} sur {totalPages}
-            </span>
-
-            <button
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
-              className="pagination-btn"
-            >
-              →
-            </button>
-          </div>
-        )}
 
         <div className="btn-header">
           {isConnected ? (

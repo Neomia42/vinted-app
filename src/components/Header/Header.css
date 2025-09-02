@@ -111,6 +111,14 @@ header {
   margin-left: auto;
 }
 
+/* Pagination intégrée dans les filtres */
+.pagination-container-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 15px;
+}
+
 .pagination-btn {
   background-color: #007782;
   color: white;
