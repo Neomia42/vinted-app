@@ -4,9 +4,7 @@ import { Elements } from "@stripe/react-stripe-js";
 
 import CheckoutForm from "./CheckoutForm";
 
-const stripePromise = loadStripe(
-  "***REMOVED***"
-);
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY); //  clé publique Stripe .env
 
 const Payment = ({ product, onClose }) => {
   const options = {
